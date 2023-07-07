@@ -2,13 +2,16 @@
 
 In this challenge, you’ll use your Python and unsupervised learning knowledge to predict if cryptocurrencies are affected by 24-hour or 7-day price changes.
 
+---
 ### Data Used
 [Crypto_market_data](/Resources/crypto_market_data.csv) - market data of different cryptocurrencies during different time periods 
 
+---
 ### Jupyter notebook
 
 The Jupyter notebook [Crypto_Clustering](/Crypto_Clustering.ipynb) will provide all steps of the data collection, preparation, and analysis. Data visualizations are shown inline and accompanying analysis responses are provided.
 
+---
 ### Summary
 
 I start by using the elbow curve method, using normalized data, to find the optimal k value for the K-Means model that will use all of the original features of the dataset. 
@@ -45,15 +48,15 @@ Finally, with the optimal k value for the PCA features, I plot the new clusters.
 
   * **Answer:** The total explained variance adds up to about 89.50% of the original data. 
 
-* **Question:** What is the best value for `k` when using the PCA data?
+**Question:** What is the best value for `k` when using the PCA data?
 
   * **Answer:** The best value for `k` would be 4 because the elbow shape starts there. 
 
 
-* **Question:** Does it differ from the best k value found using the original data?
+**Question:** Does it differ from the best k value found using the original data?
 
   * **Answer:** No, even though the elbow curves are slightly different the k value of 4 is still the best with the PCA data. 
 
-* **Question:** After visually analyzing the cluster analysis results, what is the impact of using fewer features to cluster the data using K-Means?
+**Question:** After visually analyzing the cluster analysis results, what is the impact of using fewer features to cluster the data using K-Means?
 
   * **Answer:** The inertia for the clusters with the PCA features is way lower than that of the original features. The values within each cluster are much closer together and easier to distinguish compared to the ones in the original data. The PCA plot also better separated the two outliers celsius-degree-token and ethlend. In general it seems that the clusters held the same coins even though coins like tezos and iota were much closer to the other cluster, so it seems that even with the loss of 10% data that the accuracy was still good. 
